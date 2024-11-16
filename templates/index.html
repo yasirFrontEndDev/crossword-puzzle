@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html>
+  <head><title>Codeword Solver | codewordsolver.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This online codeword solver can quickly solve any codeword clue" />
+    <meta name="keywords" content="codeword solver,codewords,codeword clues,crossword solver,hangman solver,best crossword solver,online codeword solver" />
+    <link rel="icon" ="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="/static/jquery.js"></script>
+    <script type="text/javascript" src="/static/jquery.autotab.min.js"></script>
+    <script type="text/javascript"> $(document).ready(function() {
+      $('input[type=text]').autotab();
+    });
+    </script>
+
+	<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEDQYSN522"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-LEDQYSN522');
+    </script>
+
+      <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+      <script>
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+          googletag.defineSlot(
+            '/18190176,22647288479/MCM_Validation',
+            [1, 1],
+            'div-gpt-ad-1614955491295-0'
+          ).addService(googletag.pubads());
+          googletag.pubads().enableSingleRequest();
+          googletag.enableServices();
+        });
+      </script>
+      <div id="div-gpt-ad-1614955491295-0">
+        <script>
+          googletag.cmd.push(function() {
+            if (googletag.pubads().isInitialLoadDisabled()) {
+              googletag.display('div-gpt-ad-1614955491295-0');
+              googletag.refresh('div-gpt-ad-1614955491295-0');
+            } else {
+              googletag.display('div-gpt-ad-1614955491295-0');
+            }
+          });
+        </script>
+      </div>
+
+  </head>
+  <body><a href="/"><img src="/static/codeword_solver.jpg" align="left" alt="Best Codeword Solver"></a>
+    <h2>&nbsp;<a href="/" style="text-decoration: none; color: black;">Codeword Solver</a></h2>
+    {% if multi_patterns %}
+    <b>Multi Pattern Solver</b><br />
+    With this advanced mode, you can solve two words at the same time. See below for an example.
+    <hr />
+    <div>Pattern 1</div>
+    {% else %}
+    <b>Instructions:</b> Enter the letters that you already have, with . or ? for unique unknown letters, and numbers for <i>repeated</i> unknown letters.<br />
+    <b>Examples:</b> 11.E would match 'ooze' and 112.2 would match 'llama'.
+    {% endif %}
+    <form action="results" id="cs" name="cs" autocomplete="off">
+      <p>
+        <input name="l1" id="l1" value="" class="textbox" maxlength="1" type="text">
+        <input name="l2" id="l2" value="" class="textbox" maxlength="1" type="text">
+        <input name="l3" id="l3" value="" class="textbox" maxlength="1" type="text">
+        <input name="l4" id="l4" value="" class="textbox" maxlength="1" type="text">
+        <input name="l5" id="l5" value="" class="textbox" maxlength="1" type="text">
+        <input name="l6" id="l6" value="" class="textbox" maxlength="1" type="text">
+        <input name="l7" id="l7" value="" class="textbox" maxlength="1" type="text">
+        <input name="l8" id="l8" value="" class="textbox" maxlength="1" type="text">
+        <input name="l9" id="l9" value="" class="textbox" maxlength="1" type="text">
+        <input name="l90" id="l10" value="" class="textbox" maxlength="1" type="text">
+        <input name="l91" id="l11" value="" class="textbox" maxlength="1" type="text">
+        <input name="l92" id="l12" value="" class="textbox" maxlength="1" type="text">
+        <input name="l93" id="l13" value="" class="textbox" maxlength="1" type="text">
+        <input name="l94" id="l14" value="" class="textbox" maxlength="1" type="text">
+        <input name="l95" id="l15" value="" class="textbox" maxlength="1" type="text">
+        <input class="button" style="visibility: hidden">
+      </p>
+      {% if multi_patterns %}
+      <hr />
+      <div>Pattern 2</div>
+      <p>
+        <input name="m1" id="m1" value="" class="textbox" maxlength="1" type="text">
+        <input name="m2" id="m2" value="" class="textbox" maxlength="1" type="text">
+        <input name="m3" id="m3" value="" class="textbox" maxlength="1" type="text">
+        <input name="m4" id="m4" value="" class="textbox" maxlength="1" type="text">
+        <input name="m5" id="m5" value="" class="textbox" maxlength="1" type="text">
+        <input name="m6" id="m6" value="" class="textbox" maxlength="1" type="text">
+        <input name="m7" id="m7" value="" class="textbox" maxlength="1" type="text">
+        <input name="m8" id="m8" value="" class="textbox" maxlength="1" type="text">
+        <input name="m9" id="m9" value="" class="textbox" maxlength="1" type="text">
+        <input name="m90" id="m10" value="" class="textbox" maxlength="1" type="text">
+        <input name="m91" id="m11" value="" class="textbox" maxlength="1" type="text">
+        <input name="m92" id="m12" value="" class="textbox" maxlength="1" type="text">
+        <input name="m93" id="m13" value="" class="textbox" maxlength="1" type="text">
+        <input name="m94" id="m14" value="" class="textbox" maxlength="1" type="text">
+        <input name="m95" id="m15" value="" class="textbox" maxlength="1" type="text">
+        <input type="submit" class="button" style="visibility:hidden" />
+      </p>
+      <hr />
+      {% endif %}
+      Dictionary
+      <select name="dict" id="dict">
+        <option value="big">Big (260k words)</option>
+        <option value="original">Original (115k words)</option>
+        <option value="pocket">Pocket (20k words)</option>
+      </select>
+      <input type="submit" class="button" value="submit" />
+    </form>
+    {% if data %}{{ data | safe }}{% endif %}
+    <hr>
+    {% if multi_patterns %}
+    <img src="/static/example2.png" alt="Solving multiple codeword words" align="left" style="margin-right: 15px">
+    <b>Example:</b><br />
+    We want to solve the highlighted 8 letter word going across together with the 10 letter word going down.<br /><br />
+    We enter:<br /><b>12321o54</b><br /><b>5.324o...5</b><br /><br />
+    As a solution, we get <b>catacomb:metabolism</b>
+    <br /><br /><br /><br /><br /><br />
+    {% else %}
+    <b>Longer example:</b> <img src="/static/example.png" alt="How to solve codewords"> is entered as <b>..A122.1R</b><span class="smaller"><ul><li>Letters one, two and seven are unique unknown letters, so we enter <b>.</b> in those positions. <li>Third and ninth letters are known so we enter <b>A</b> and <b>R</b> in those positions.</li> <li>Fourth and eighth letters are repeated unknown letters, so we enter <b>1</b> in those positions.</li><li>Letters five and six are a different set of repeated unknown letters, so we enter <b>2</b> in those positions.</li><li>Thus we enter <b>..A122.1R</b> and get the only word that matches the pattern: <b>'chauffeur'.</b></li></ul></span>
+    {% endif %}
+    <hr>
+    <span class="smaller"><b>December 2018 update:</b> Merged a much bigger dictionary (Webster's) into the current dictionary<br />
+      <b>July 2020 update:</b> Added <a href="/multi_patterns">multi pattern solver</a><br /><br /></span>
+    <span class="mini">Contact: <img src="/static/email.png">. Please help to keep this server running! <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+        ">
+        <input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online." style="display:block;float:left;">
+      </form>
+    </span>
+    <script type="text/javascript">
+      if ($(window).width() > 800) {
+        $('#l1').focus();
+      }
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('dict')) {
+        $(function() {
+          $("#dict").val(urlParams.get('dict'));
+        });
+      }
+    </script>
+  </body>
+</html>
+
